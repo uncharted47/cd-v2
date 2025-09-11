@@ -163,3 +163,7 @@
   background: linear-gradient(180deg, #0000001f, #000000b3);
   z-index: -1;
 }
+
+.line-height-custom {
+  line-height: 0 !important;
+}

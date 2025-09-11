@@ -17,8 +17,10 @@ export default function NotreMarquePage() {
 
      <SectionMarqueAnimated />
       <Section04Marque />
-      <Section05Marque />
-      <SectionArtiste />
+      <div className="flex flex-col md:flex-row gap-4">
+        <Section05Marque />
+        <SectionArtiste />
+      </div>
 
       {/* hfj */}
     </main>

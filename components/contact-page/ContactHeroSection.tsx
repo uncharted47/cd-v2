@@ -9,9 +9,18 @@ import fontTitle from "@/lib/font";
 const ContactHeroSection = () => {
   return (
     <section className="min-h-screen relative flex items-center justify-center text-white">
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          .contact-hero-text * {
+            line-height: 1.2 !important;
+            color: white !important;
+          }
+        `
+      }} />
+      
       <div className="absolute inset-0 w-full h-full">
         <Image
-          src="/contact/Hero Section.jpg"
+          src="/contact/IMG_3450.JPG"
           alt="Équipe Clé Blanche à votre service"
           fill
           className="object-cover"
@@ -20,13 +29,13 @@ const ContactHeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60" />
       </div>
 
-      <div className="relative z-10 text-center px-5 max-w-4xl mx-auto pt-24">
+      <div className="relative z-10 text-center px-5 max-w-4xl mx-auto pt-24 contact-hero-text">
         
 
         <div className="flex flex-col gap-3 mx-auto text-center mb-8">
           <SplitText
             text="Notre équipe est"
-            className={`text-4xl md:text-6xl lg:text-7xl font-light tracking-wide ${fontTitle.className}`}
+            className={`text-4xl md:text-6xl lg:text-7xl font-light tracking-wide text-white ${fontTitle.className}`}
             delay={40}
             duration={1.4}
             ease="power4.out"
@@ -49,7 +58,7 @@ const ContactHeroSection = () => {
           />
           <SplitText
             text="à votre écoute"
-            className={`text-4xl md:text-6xl lg:text-7xl font-medium tracking-wide text-second ${fontTitle.className}`}
+            className={`text-4xl md:text-6xl lg:text-7xl font-medium tracking-wide text-white ${fontTitle.className}`}
             delay={60}
             duration={1.4}
             ease="power4.out"
@@ -75,7 +84,7 @@ const ContactHeroSection = () => {
         <div className="flex flex-col gap-2">
           <SplitText
             text="pour toute information"
-            className={`text-xl md:text-2xl lg:text-3xl font-extralight tracking-wider opacity-90 max-w-4xl mx-auto leading-relaxed ${fontTitle.className}`}
+            className={`text-xl md:text-2xl lg:text-3xl font-extralight tracking-wider text-white max-w-4xl mx-auto leading-relaxed ${fontTitle.className}`}
             delay={80}
             duration={1.2}
             ease="power3.out"
@@ -96,8 +105,8 @@ const ContactHeroSection = () => {
           />
           <SplitText
             text="ou prise de rendez-vous personnalisé"
-            className={`text-xl md:text-2xl lg:text-3xl font-extralight tracking-wider opacity-90 max-w-4xl mx-auto leading-relaxed ${fontTitle.className}`}
-            delay={100}
+            className={`text-xl md:text-2xl lg:text-3xl font-extralight tracking-wider text-white max-w-4xl mx-auto leading-relaxed ${fontTitle.className}`}
+            delay={60}
             duration={1.2}
             ease="power3.out"
             splitType="chars"

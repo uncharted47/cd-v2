@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 interface BrochureModalProps {
   isOpen: boolean;
@@ -36,7 +38,30 @@ const BrochureModal: React.FC<BrochureModalProps> = ({ isOpen, onClose }) => {
         >
           ×
         </button>
-        <h2 className="text-2xl font-bold mb-4 text-main-black text-center">Télécharger la brochure</h2>
+        <style>
+          {`
+            .react-tel-input .country-list {
+              background-color: rgba(255, 255, 255, 0.9) !important;
+            }
+            .react-tel-input .country-list .country {
+              color: black !important;
+            }
+            .react-tel-input .country-list .country:hover {
+              background-color: rgba(0, 0, 0, 0.1) !important;
+            }
+            .react-tel-input .country-list .country.highlight {
+              background-color: rgba(0, 0, 0, 0.1) !important;
+            }
+            .react-tel-input .search {
+              background-color: transparent !important;
+              color: black !important;
+            }
+            .react-tel-input .search-box {
+              background-color: transparent !important;
+            }
+          `}
+        </style>
+        <h2 className="text-2xl font-bold mb-4 text-main-black text-center text-main">Télécharger la brochure</h2>
         {!submitted ? (
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
             <div className="flex gap-2">
@@ -61,16 +86,30 @@ const BrochureModal: React.FC<BrochureModalProps> = ({ isOpen, onClose }) => {
                 autoComplete="off"
               />
             </div>
-            <input
-              type="tel"
-              name="telephone"
-              placeholder="Votre téléphone"
-              value={form.telephone}
-              onChange={handleChange}
-              required
-              className="border border-main/30 rounded px-3 py-2 text-black placeholder:text-gray-400 focus:outline-main bg-white"
-              autoComplete="off"
-            />
+            <div className="relative">
+              <PhoneInput
+                country={'ma'}
+                preferredCountries={['ma', 'fr']}
+                value={form.telephone}
+                onChange={(phone) => setForm({ ...form, telephone: phone })}
+                placeholder="Votre téléphone"
+                autoFormat={false}
+                inputProps={{
+                  name: 'telephone',
+                  required: true,
+                  // placeholder: 'Votre téléphone', // This is moved to the component root
+                  className: 'pl-14 h-10 w-full rounded border border-main/30 placeholder:text-gray-400 text-black bg-white focus:outline-main',
+                }}
+                buttonClass="!border-none !bg-transparent !outline-none !w-10 !h-8 !flex !items-center !justify-center !rounded"
+                buttonStyle={{ position: 'absolute', top: '4px', left: '8px' }}
+                containerClass="w-full"
+                enableSearch={true}
+                searchPlaceholder="Recherche"
+                dropdownClass="bg-white/90"
+                searchStyle={{ backgroundColor: 'transparent', color: 'black' }}
+                disableDropdown={false}
+              />
+            </div>
             <input
               type="email"
               name="email"

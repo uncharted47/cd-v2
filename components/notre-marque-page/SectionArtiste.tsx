@@ -36,7 +36,7 @@ const SectionArtiste = () => {
   ];
 
   return (
-    <div className="my-10 md:my-24 px-4">
+    <div className="my-10 md:my-24 px-4 flex-1">
       <div
         className={`grid grid-cols-1 ${
           isMobile ? "flex-col" : "flex-row"
@@ -56,11 +56,6 @@ const SectionArtiste = () => {
             }`}
             onMouseEnter={!isMobile ? () => setActiveCard(item.id) : undefined}
             onMouseLeave={!isMobile ? () => setActiveCard(null) : undefined}
-            onClick={
-              isMobile
-                ? () => setActiveCard(activeCard === item.id ? null : item.id)
-                : undefined
-            }
           >
             {/* Background Image with Scale Animation */}
             <div
@@ -79,16 +74,19 @@ const SectionArtiste = () => {
             />
 
             {/* Content Container */}
-            <div className="absolute bottom-0 w-full p-4 md:p-8 space-y-3">
+            <div className="absolute bottom-0 w-full p-4 md:p-6 space-y-2">
               {/* Title - Always Visible */}
-              <h2 className="text-xl md:text-4xl font-bold text-white drop-shadow-lg transition-all duration-500 translate-y-0">
+              <h2 className="text-lg md:text-3xl font-bold text-white drop-shadow-lg">
                 {item.title}
               </h2>
 
-              <p className="text-xl text-white">{item.description}</p>
-              <p className="text-lg text-white mt-4">
-                {item.architect.name} 
-              </p>
+              {/* Description - Always visible */}
+              <div className="space-y-2">
+                <p className="text-sm md:text-base text-white leading-relaxed">{item.description}</p>
+                <p className="text-sm md:text-base text-white">
+                  {item.architect.name} 
+                </p>
+              </div>
              
             </div>
           </div>
