@@ -3,17 +3,17 @@ import ImageGrid from '@/components/ui/ImageGrid';
 import fontTitle from '@/lib/font';
 
 const temoinImages = [
-  '/Galeriee/Appartement témoin/IMG_7910-1.jpg',
-  '/Galeriee/Appartement témoin/IMG_7920-1.jpg',
-  '/Galeriee/Appartement témoin/IMG_7957-1.jpg',
-  '/Galeriee/Appartement témoin/IMG_7974-1.jpg',
-  '/Galeriee/Appartement témoin/IMG_7991-1.jpg',
-  '/Galeriee/Appartement témoin/IMG_8021-1.jpg',
-  '/Galeriee/Appartement témoin/IMG_8037-1.jpg',
-  '/Galeriee/Appartement témoin/IMG_8050-1.jpg',
-  '/Galeriee/Appartement témoin/IMG_8082-1.jpg',
-  '/Galeriee/Appartement témoin/IMG_8141-1.jpg',
-  '/Galeriee/Appartement témoin/IMG_8154-1.jpg',
+  '/Galeriee/Appartement-temoin/IMG_7910-1.jpg',
+  '/Galeriee/Appartement-temoin/IMG_7920-1.jpg',
+  '/Galeriee/Appartement-temoin/IMG_7957-1.jpg',
+  '/Galeriee/Appartement-temoin/IMG_7974-1.jpg',
+  '/Galeriee/Appartement-temoin/IMG_7991-1.jpg',
+  '/Galeriee/Appartement-temoin/IMG_8021-1.jpg',
+  '/Galeriee/Appartement-temoin/IMG_8037-1.jpg',
+  '/Galeriee/Appartement-temoin/IMG_8050-1.jpg',
+  '/Galeriee/Appartement-temoin/IMG_8082-1.jpg',
+  '/Galeriee/Appartement-temoin/IMG_8141-1.jpg',
+  '/Galeriee/Appartement-temoin/IMG_8154-1.jpg',
 ];
 
 const TemoinSection = () => (
