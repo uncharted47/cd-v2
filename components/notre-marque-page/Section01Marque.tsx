@@ -5,7 +5,7 @@ import fontTitle from "@/lib/font";
 const Section01Marque = () => {
   return (
     <div className="flex flex-col my-12 md:my-24 gap-10 container mx-auto text-center">
-      <h2 className={`text-3xl md:text-5xl font-bold text-main ${fontTitle.className}`}>
+      <h2 className={`text-3xl md:text-5xl font-bold text-main-black ${fontTitle.className}`}>
         {/* Un site unique pour {" "} */}
         Sobriété, raffinement et harmonie
         {/* <span className="block">une résidence d&apos;exception</span> */}

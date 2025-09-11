@@ -76,9 +76,9 @@ const Hero = () => {
                 formSection.scrollIntoView({ behavior: 'smooth' });
               }
             }}
-            className="flex items-center justify-center gap-2 px-6 py-2 rounded-md border-main border text-main font-bold bg-[#e5dac5] hover:bg-transparent hover:text-white  group duration-300 ease-in-out transition-all"
+            className="flex items-center justify-center gap-2 px-6 py-2 rounded-md border-main border text-main-black font-bold bg-[#e5dac5] hover:bg-transparent hover:text-white  group duration-300 ease-in-out transition-all"
           >
-            <div className="h-8 w-8 p-1.5 flex justify-center items-center rounded-full bg-white text-main  group-hover:bg-main group-hover:text-white">
+            <div className="h-8 w-8 p-1.5 flex justify-center items-center rounded-full bg-white text-main-black  group-hover:bg-main group-hover:text-white">
               <Phone />
             </div>
             Demander une visite privée

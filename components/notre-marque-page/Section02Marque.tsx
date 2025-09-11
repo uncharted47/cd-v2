@@ -16,7 +16,7 @@ const Section02Marque = () => {
           />
         </div>
         <div className="flex flex-col gap-2 order-1 md:order-2">
-          <h2 className={`text-3xl md:text-5xl font-bold text-main ${fontTitle.className}`}>
+          <h2 className={`text-3xl md:text-5xl font-bold text-main-black ${fontTitle.className}`}>
             Bien plus qu&apos;une résidence, {" "}
             <span className="block">une vision</span>
           </h2>

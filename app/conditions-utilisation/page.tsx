@@ -3,8 +3,8 @@ import React from "react";
 
 const ConditionsUtilisation = () => (
   <main className="container mx-auto px-5 py-12 max-w-4xl text-base text-black">
-    <h1 className="text-4xl font-extrabold mb-10 text-main text-center" style={{ marginTop: '100px', letterSpacing: '-1px' }}>Conditions Générales d&apos;Utilisation</h1>
-    <div className="prose prose-lg max-w-none prose-h2:text-main prose-h2:font-bold prose-h2:text-2xl prose-h2:mt-8 prose-h2:mb-2 prose-p:leading-relaxed prose-p:mb-4 prose-ul:mb-4 prose-li:marker:text-main">
+    <h1 className="text-4xl font-extrabold mb-10 text-main-black text-center" style={{ marginTop: '100px', letterSpacing: '-1px' }}>Conditions Générales d&apos;Utilisation</h1>
+    <div className="prose prose-lg max-w-none prose-h2:text-main-black prose-h2:font-bold prose-h2:text-2xl prose-h2:mt-8 prose-h2:mb-2 prose-p:leading-relaxed prose-p:mb-4 prose-ul:mb-4 prose-li:marker:text-main-black">
       {/* ...contenu principal extrait du site... */}
       <h2>Mentions légales</h2>
       <p>L’édition et l’hébergement de l’application mobile Clé Blanche (ci-après désignée par « Application »), et le traitement de ses données sont assurés par la société Saralaz 1, Société Anonyme de droit marocain...</p>

@@ -118,7 +118,7 @@ const ContactHeroSection = () => {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
-          <button className="flex items-center justify-center gap-2 px-6 py-2 rounded-md border-main border text-main font-bold bg-[#e5dac5] hover:bg-transparent hover:text-white  group duration-300 ease-in-out transition-all">
+          <button className="flex items-center justify-center gap-2 px-6 py-2 rounded-md border-main border text-main-black font-bold bg-[#e5dac5] hover:bg-transparent hover:text-white  group duration-300 ease-in-out transition-all">
             <Phone />
             Prendre RDV
           </button>

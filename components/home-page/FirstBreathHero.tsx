@@ -6,7 +6,7 @@ const FirstBreathHero = () => {
     <>
       <div className="py-24 gap-10  z-10">
         <div className="flex flex-col gap-5 lg:w-3/4 text-center my-5 container mx-auto">
-          <h2 className={`text-3xl md:text-5xl font-bold text-main ${fontTitle.className}`}>
+          <h2 className={`text-3xl md:text-5xl font-bold text-main-black ${fontTitle.className}`}>
             Saraya Holding & A.Lazrak Group
             <span className="block">Un partenariat d’excellence</span>
           </h2>

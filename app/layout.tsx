@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${siena.className} antialiased`}>
+      <body className={`${siena.className} antialiased`} suppressHydrationWarning={true}>
         <NavBar />
         {children}
         <ScrollToTopButton />

@@ -44,7 +44,7 @@ const Faq = () => {
     <div className="container mx-auto my-12 md:my-24 px-5">
       <div className="grid lg:grid-cols-3 gap-10 items-start">
         <div className="flex flex-col gap-3 mb-8 lg:mb-0">
-          <h1 className="text-3xl md:text-5xl font-bold text-main mt-12">
+          <h1 className="text-3xl md:text-5xl font-bold text-main-black mt-12">
             Questions fréquemment posées
           </h1>
           <p className="text-base md:text-lg text-gray-600">

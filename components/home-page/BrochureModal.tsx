@@ -30,13 +30,13 @@ const BrochureModal: React.FC<BrochureModalProps> = ({ isOpen, onClose }) => {
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-transparent backdrop-blur-sm">
       <div className="bg-white/90 rounded-2xl shadow-2xl p-8 w-full max-w-md relative border border-main">
         <button
-          className="absolute top-2 right-2 text-gray-400 hover:text-main text-2xl font-bold"
+          className="absolute top-2 right-2 text-gray-400 hover:text-main-black text-2xl font-bold"
           onClick={onClose}
           aria-label="Fermer le modal"
         >
           ×
         </button>
-        <h2 className="text-2xl font-bold mb-4 text-main text-center">Télécharger la brochure</h2>
+        <h2 className="text-2xl font-bold mb-4 text-main-black text-center">Télécharger la brochure</h2>
         {!submitted ? (
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
             <div className="flex gap-2">
@@ -90,7 +90,7 @@ const BrochureModal: React.FC<BrochureModalProps> = ({ isOpen, onClose }) => {
           </form>
         ) : (
           <div className="flex flex-col items-center gap-4">
-            <p className="text-main text-center">Merci ! Cliquez ci-dessous pour télécharger la brochure.</p>
+            <p className="text-main-black text-center">Merci ! Cliquez ci-dessous pour télécharger la brochure.</p>
             <a
               href="/brochure.pdf"
               download

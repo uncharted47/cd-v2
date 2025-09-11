@@ -98,7 +98,7 @@ const HowCanHelpYou = () => {
     <div className="my-12 md:my-24 px-4">
       <div className="flex flex-col gap-3 items-center text-center my-8 md:my-12">
         {/* <h2 className="text-lg md:text-xl text-gray-600  ${fontTitle.className}`}">Se sentir libre</h2> */}
-        <p className={`text-2xl lg:text-5xl font-semibold text-main ${fontTitle.className}`}>
+        <p className={`text-2xl lg:text-5xl font-semibold text-main-black ${fontTitle.className}`}>
        Se sentir libre  à l’abri des regards
         </p>
       </div>

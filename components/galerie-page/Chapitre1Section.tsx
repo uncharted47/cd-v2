@@ -31,7 +31,7 @@ const Chapitre1Section = () => (
   <section className="py-16 bg-white">
     <div className="container mx-auto px-5">
       <div className="flex flex-col items-center justify-center min-h-[30vh]">
-        {/* <h2 className="text-4xl md:text-6xl font-bold text-main mb-6 drop-shadow-lg text-center lg:text-center">Le chapitre I s’est cloturé</h2> */}
+        {/* <h2 className="text-4xl md:text-6xl font-bold text-main-black mb-6 drop-shadow-lg text-center lg:text-center">Le chapitre I s’est cloturé</h2> */}
         <p className="text-xl md:text-2xl text-gray-700 max-w-2xl text-center lg:text-center mb-8 drop-shadow">
         Clé Blanche a ouvert son histoire avec une première phase livrée, symbole de rigueur, d’excellence et de raffinement        </p>
       </div>

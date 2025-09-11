@@ -3,8 +3,8 @@ import React from "react";
 
 const PolitiqueConfidentialite = () => (
   <main className="container mx-auto px-5 py-12 max-w-4xl text-base text-black">
-    <h1 className="text-4xl font-extrabold mb-10 text-main text-center" style={{ marginTop: '100px', letterSpacing: '-1px' }}>Politique de confidentialité</h1>
-    <div className="prose prose-lg max-w-none prose-h2:text-main prose-h2:font-bold prose-h2:text-2xl prose-h2:mt-8 prose-h2:mb-2 prose-p:leading-relaxed prose-p:mb-4 prose-ul:mb-4 prose-li:marker:text-main">
+    <h1 className="text-4xl font-extrabold mb-10 text-main-black text-center" style={{ marginTop: '100px', letterSpacing: '-1px' }}>Politique de confidentialité</h1>
+    <div className="prose prose-lg max-w-none prose-h2:text-main-black prose-h2:font-bold prose-h2:text-2xl prose-h2:mt-8 prose-h2:mb-2 prose-p:leading-relaxed prose-p:mb-4 prose-ul:mb-4 prose-li:marker:text-main-black">
       <h2>1. Collecte des informations</h2>
       <p>Nous collectons les informations suivantes lorsque vous utilisez notre Application :<br />
       • Informations personnelles : Nom, prénom, adresse email, numéro de téléphone, adresse postale.<br />

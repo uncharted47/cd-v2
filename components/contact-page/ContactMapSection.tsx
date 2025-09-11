@@ -26,7 +26,7 @@ const ContactMapSection = () => (
       </Link>
       <div className="mt-6 text-center text-gray-600 text-lg max-w-xl">
         Découvrez l&apos;emplacement exact de{" "}
-        <span className="text-main font-semibold">Clé Blanche</span> à Rabat.
+        <span className="text-main-black font-semibold">Clé Blanche</span> à Rabat.
       </div>
     </div>
   </section>

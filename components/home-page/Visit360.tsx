@@ -5,7 +5,7 @@ const Visit360 = () => {
     <div className="py-24">
       <div className="container mx-auto flex flex-col gap-10 px-5">
         <h2 className="text-3xl lg:text-5xl font-semibold text-center">
-          Visite virtuelle <span className="text-main block">de l’appartement</span>
+          Visite virtuelle <span className="text-main-black block">de l’appartement</span>
         </h2>
         <iframe
           title="Lazrak 360° Visit"

@@ -35,7 +35,7 @@ const GalerieImage = () => {
 
   return (
     <div className="my-24">
-      <h2 className={`text-center text-3xl md:text-5xl font-bold text-main ${fontTitle.className}`}>
+      <h2 className={`text-center text-3xl md:text-5xl font-bold text-main-black ${fontTitle.className}`}>
         Un Art de vivre réinventé
         
       </h2>

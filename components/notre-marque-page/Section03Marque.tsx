@@ -17,7 +17,7 @@ const Section03Marque = () => {
 
         
         {/* <div className="flex flex-col gap-2 order-2 md:order-1">
-          <h2 className={`text-3xl md:text-5xl font-bold text-main mb-6 ${fontTitle.className}`}>
+          <h2 className={`text-3xl md:text-5xl font-bold text-main-black mb-6 ${fontTitle.className}`}>
             Notre <span className="block">Style</span>
           </h2>
           <div className="flex flex-col gap-3 md:gap-2 text-black mt-3 md:mt-5">
@@ -26,7 +26,7 @@ const Section03Marque = () => {
             </p>
           </div>
           
-          <h3 className={`text-2xl md:text-3xl font-bold text-main mt-8 mb-4 ${fontTitle.className}`}>
+          <h3 className={`text-2xl md:text-3xl font-bold text-main-black mt-8 mb-4 ${fontTitle.className}`}>
             Notre <span className="block">Expertise</span>
           </h3>
           <div className="flex flex-col gap-3 md:gap-2 text-black">
@@ -35,7 +35,7 @@ const Section03Marque = () => {
             </p>
           </div>
           
-          <h3 className={`text-2xl md:text-3xl font-bold text-main mt-8 mb-4 ${fontTitle.className}`}>
+          <h3 className={`text-2xl md:text-3xl font-bold text-main-black mt-8 mb-4 ${fontTitle.className}`}>
             Nos <span className="block">Valeurs</span>
           </h3>
           <div className="flex flex-col gap-3 md:gap-2 text-black">

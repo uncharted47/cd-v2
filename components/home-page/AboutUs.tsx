@@ -6,7 +6,7 @@ const AboutUs = () => {
     <div className="flex flex-col  my-12 md:my-24 gap-10 container mx-auto ">
       <div className="px-4 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-5 items-center">
         <div className="flex flex-col gap-2 order-2 md:order-1">
-          <h2 className="text-3xl md:text-5xl font-bold text-main">
+          <h2 className="text-3xl md:text-5xl font-bold text-main-black">
             Un site unique pour {" "}
             <span className="text-second">une résidence d’exception</span>
           </h2>
@@ -46,7 +46,7 @@ const AboutUs = () => {
         </div>
         <div className="flex flex-col gap-2 order-1 md:order-2">
           <p className="text-xl"></p>
-          <h2 className="text-3xl md:text-5xl font-bold text-main">
+          <h2 className="text-3xl md:text-5xl font-bold text-main-black">
             Bien plus qu’une résidence {" "}
             <span className="text-second">une vision</span>
           </h2>

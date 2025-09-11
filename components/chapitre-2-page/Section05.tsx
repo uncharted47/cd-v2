@@ -14,7 +14,7 @@ const Section05 = () => (
         </div>
 
     
-        <h2 className={`text-3xl md:text-5xl font-bold text-main ${fontTitle.className}`}>
+        <h2 className={`text-3xl md:text-5xl font-bold text-main-black ${fontTitle.className}`}>
           Des espaces de vie, été comme hiver
         </h2>
 

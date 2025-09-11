@@ -16,7 +16,7 @@ const Section04Marque = () => {
           />
         </div>
         <div className="flex flex-col gap-2 order-1 md:order-2">
-          <h2 className={`text-3xl md:text-5xl font-bold text-main ${fontTitle.className}`}>
+          <h2 className={`text-3xl md:text-5xl font-bold text-main-black ${fontTitle.className}`}>
             Habiter plus Vert
           </h2>
           <div className="flex flex-col gap-3 md:gap-2 text-black mt-3 md:mt-5">

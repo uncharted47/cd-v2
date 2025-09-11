@@ -26,7 +26,7 @@ const Chapitre2Section = () => {
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-5">
         <div className="flex flex-col items-center justify-center min-h-[30vh]">
-          <h2 className={`text-4xl md:text-6xl font-bold text-main mb-6 drop-shadow-lg text-center lg:text-center ${fontTitle.className}`}>
+          <h2 className={`text-4xl md:text-6xl font-bold text-main-black mb-6 drop-shadow-lg text-center lg:text-center ${fontTitle.className}`}>
           Clé Blanche entame son Chapitre II
           </h2>
           <p >
@@ -43,7 +43,7 @@ const Chapitre2Section = () => {
             >
               Précédent
             </button>
-            <span className="text-main font-bold">
+            <span className="text-main-black font-bold">
               Page {page} / {totalPages}
             </span>
             <button

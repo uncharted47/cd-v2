@@ -55,7 +55,7 @@ const ContactInfoSection = () => {
                 >
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-main/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-main/20 transition-colors duration-300">
-                      <item.icon className="w-6 h-6 text-main" />
+                      <item.icon className="w-6 h-6 text-main-black" />
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center justify-between mb-2">
@@ -63,14 +63,14 @@ const ContactInfoSection = () => {
                       </div>
                       <a 
                         href={item.link}
-                        className="text-lg text-main hover:text-main/80 transition-colors duration-300 font-medium block mb-1"
+                        className="text-lg text-main-black hover:text-main-black/80 transition-colors duration-300 font-medium block mb-1"
                       >
                         {item.value}
                       </a>
                     
                     </div>
                     <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <svg className="w-5 h-5 text-main" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5 text-main-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>
                     </div>

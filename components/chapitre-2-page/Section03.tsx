@@ -18,22 +18,22 @@ const Section03 = () => {
             </div>
 
            
-            <h2 className="text-4xl md:text-6xl font-bold text-main mb-6 drop-shadow-lg text-center lg:text-left">
+            <h2 className="text-4xl md:text-6xl font-bold text-main-black mb-6 drop-shadow-lg text-center lg:text-left">
               Un luxe ultime{' '}
-              <span className="text-main font-bold">suspendu</span>{' '}
+              <span className="text-main-black font-bold">suspendu</span>{' '}
               <span className="text-gray-900 font-bold">entre ciel et terre</span>
             </h2>
 
           
             <div className="space-y-6">
               <p className="text-xl md:text-2xl text-gray-700 max-w-2xl text-center lg:text-left mb-4">
-                <span className="text-main font-bold">Vivre en hauteur.</span> Sentir l&apos;air circuler librement, dompter la lumière. Les penthouses de Clé Blanche offrent un horizon sans limites.
+                <span className="text-main-black font-bold">Vivre en hauteur.</span> Sentir l&apos;air circuler librement, dompter la lumière. Les penthouses de Clé Blanche offrent un horizon sans limites.
               </p>
               <p className="text-xl md:text-2xl text-gray-700 max-w-2xl text-center lg:text-left mb-4">
                 Sous la pergola bioclimatique, la lumière se module, le vent s&apos;adoucit, l&apos;espace s&apos;adapte au rythme du jour. Plus loin, une piscine suspendue reflète le ciel, fusionne avec l&apos;instant.
               </p>
               <p className="text-xl md:text-2xl text-gray-700 max-w-2xl text-center lg:text-left">
-                <span className="text-main font-bold">Ici, rien ne contraint, tout respire.</span> L&apos;extérieur n&apos;est plus une frontière mais une extension naturelle du dedans.
+                <span className="text-main-black font-bold">Ici, rien ne contraint, tout respire.</span> L&apos;extérieur n&apos;est plus une frontière mais une extension naturelle du dedans.
               </p>
             </div>
 
