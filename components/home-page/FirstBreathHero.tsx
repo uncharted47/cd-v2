@@ -4,13 +4,13 @@ import Image from "next/image";
 const FirstBreathHero = () => {
   return (
     <>
-      <div className="py-24 gap-10  z-10">
-        <div className="flex flex-col gap-5 lg:w-3/4 text-center my-5 container mx-auto">
+      <div className="py-12 gap-10  z-10">
+        <div className="flex flex-col gap-5 lg:w-3/4 text-center my-4 container mx-auto">
           <h2 className={`text-3xl md:text-5xl font-bold text-main-black ${fontTitle.className}`}>
             Saraya Holding & A.Lazrak Group
             <span className="block">Un partenariat d’excellence</span>
           </h2>
-          <div className="flex flex-col gap-3 md:gap-2 text-black mt-3 md:mt-5">
+          <div className="flex flex-col gap-3 md:gap-2 text-black mt-3 md:mt-5 pb-12">
             <p>
               Partie intégrante de l’ADN des fondateurs de la marque, cette
               culture de l’innovation et de l’authenticité est cultivée chaque
