@@ -18,7 +18,7 @@ const page = () => {
       <Hero />
       {/* Banner images en mode Hero */}
       <div className="container mx-auto my-24 grid grid-cols-1 lg:grid-cols-2 gap-5 items-center">
-        <div className="flex flex-col gap-4 p-3">
+        <div className="flex flex-col gap-4 p-4">
           <h2
             className={`text-2xl lg:text-5xl font-semibold text-main-black ${fontTitle.className}`}
           > 
