@@ -51,7 +51,7 @@ const FormContact = () => {
 
   return (
     <div className="pb-12" id="form-contact">
-      <div className="container mx-auto w-3/4  items-center px-5">
+      <div className="container mx-auto lg:w-3/4 items-center p-4 lg:px-5">
         {success ? (
           <div className="text-black  backdrop-blur-3xl p-5 py-12 rounded-2xl border border-main flex flex-col gap-5  items-center text-lg text-center mt-2">
             <Image

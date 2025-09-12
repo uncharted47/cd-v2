@@ -1,5 +1,6 @@
 "use client";
 
+import fontTitle from "@/lib/font";
 import React, { useState, useEffect } from "react";
  
 
@@ -76,7 +77,7 @@ const SectionArtiste = () => {
             {/* Content Container */}
             <div className="absolute bottom-0 w-full p-4 md:p-6 space-y-2">
               {/* Title - Always Visible */}
-              <h2 className="text-lg md:text-3xl font-bold text-white drop-shadow-lg">
+              <h2 className={`text-lg md:text-3xl font-bold text-white drop-shadow-lg ${fontTitle.className}`}>
                 {item.title}
               </h2>
 

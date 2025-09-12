@@ -45,7 +45,7 @@ const Section04 = () => {
         />
         {/* Image après (right) */}
         <img
-          src="/Image 04.jpeg"
+          src="/interieurterrassepenthousesoirretouche01635mm-x-412mm300dpi.jpg"
           alt="Après"
           className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
           style={{ clipPath: `inset(0 0 0 ${percent * 100}%)` }}

@@ -1,3 +1,4 @@
+// import { color } from "framer-motion";
 import React, { useState } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
@@ -29,10 +30,16 @@ const BrochureModal: React.FC<BrochureModalProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-transparent backdrop-blur-sm">
-      <div className="bg-white/90 rounded-2xl shadow-2xl p-8 w-full max-w-md relative border border-main">
+    <div 
+      className="fixed inset-0 z-50 flex items-center justify-center bg-transparent backdrop-blur-sm"
+      onClick={onClose}
+    >
+      <div 
+        className="bg-white/90 rounded-2xl shadow-2xl p-8 w-full max-w-md relative border border-main"
+        onClick={(e) => e.stopPropagation()}
+      >
         <button
-          className="absolute top-2 right-2 text-gray-400 hover:text-main-black text-2xl font-bold"
+          className="absolute top-2 right-2 text-gray-400 hover:text-main text-2xl font-bold"
           onClick={onClose}
           aria-label="Fermer le modal"
         >
@@ -61,7 +68,7 @@ const BrochureModal: React.FC<BrochureModalProps> = ({ isOpen, onClose }) => {
             }
           `}
         </style>
-        <h2 className="text-2xl font-bold mb-4 text-main-black text-center text-main">Télécharger la brochure</h2>
+        <h2 className="text-2xl font-bold mb-4 text-main text-center">Télécharger la brochure</h2>
         {!submitted ? (
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
             <div className="flex gap-2">

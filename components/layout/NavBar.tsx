@@ -21,10 +21,10 @@ const NavBar = () => {
   ];
 
   return (
-    <div className=" fixed right-1/2 mt-4 translate-x-1/2 w-full px-5 z-50">
-      <div className="w-full container mx-auto p-4  text-main-black bg-[#e5dac5] border border-[#e5dac5] font-light flex justify-end relative items-center">
+    <div className="fixed right-1/2 mt-4 translate-x-1/2 w-full px-5 z-50">
+      <div className="w-full container mx-auto p-4 text-main-black bg-[#e5dac5] border border-[#e5dac5] font-light flex justify-end relative items-center">
         {/* Logo */}
-        <Link href={"/"} className=" absolute left-0 -bottom-3">
+        <Link href={"/"} className="absolute left-0 -bottom-3">
           <Image
             src={"/logo-main.png"}
             style={{ position: "relative", left: -1 }}
@@ -36,7 +36,7 @@ const NavBar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-5">
+        <div className="hidden md:flex items-center gap-4 lg:gap-5">
           {links.map((link) => (
             <Link
               key={link.href}
@@ -50,7 +50,7 @@ const NavBar = () => {
           ))}
           <LanguageSwitcher />
           <Link href="/contact">
-            <button className="flex items-center justify-center gap-2 px-3 py-2 rounded-md border-main border text-white font-bold bg-main hover:bg-transparent hover:text-main-black  group duration-300 ease-in-out transition-all">
+            <button className="flex items-center justify-center gap-2 px-3 py-2 rounded-md border-main border text-white font-bold bg-main hover:bg-transparent hover:text-main-black group duration-300 ease-in-out transition-all">
               Prendre RDV
             </button>
           </Link>
@@ -59,7 +59,7 @@ const NavBar = () => {
         {/* Mobile Navigation */}
         <div className="md:hidden flex justify-end">
           <Sheet>
-            <SheetTrigger className="text-white">
+            <SheetTrigger className="text-main-black">
               <Menu className="w-6 h-6" />
             </SheetTrigger>
             <SheetContent
@@ -78,22 +78,44 @@ const NavBar = () => {
                     />
                   </Link>
                   <SheetClose className="text-white">
-                    <X />
+                    <X className="w-6 h-6" />
                   </SheetClose>
                 </div>
               </SheetHeader>
-              <ul className="flex flex-col gap-4 mt-6">
-                {links.map((link) => (
-                  <SheetClose asChild key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="block px-4 py-2 text-sm text-white hover:bg-gray-100 hover:text-main-black transition"
-                    >
-                      {link.label}
+
+              <div className="flex flex-col gap-6 mt-8">
+                {/* Navigation Links */}
+                <ul className="flex flex-col gap-2">
+                  {links.map((link) => (
+                    <li key={link.href}>
+                      <SheetClose asChild>
+                        <Link
+                          href={link.href}
+                          className="block px-4 py-3 text-base text-white hover:bg-white/10 rounded-md transition-colors duration-200"
+                        >
+                          {link.label}
+                        </Link>
+                      </SheetClose>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Language Switcher */}
+                <div className="px-4">
+                  <LanguageSwitcher />
+                </div>
+
+                {/* Contact Button */}
+                <div className="px-4">
+                  <SheetClose asChild>
+                    <Link href="/contact">
+                      <button className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-md border border-white text-white bg-transparent hover:bg-white hover:text-main transition-all duration-300">
+                        Prendre RDV
+                      </button>
                     </Link>
                   </SheetClose>
-                ))}
-              </ul>
+                </div>
+              </div>
             </SheetContent>
           </Sheet>
         </div>

@@ -30,7 +30,7 @@ const HowCanHelpYou = () => {
       image: "/houses/APPARTEMENT-PLENITUDE-4.webp",
       title: "Un large éventail de surfaces",
       description:
-        "Chaque espace respire, ouvert sur l’extérieur, baigné d’une clarté changeante. Sobres et épurés, nos intérieurs marient luxe discret et matériaux bruts dans une palette neutre, propice à l’expression personnelle.",
+        "Chaque espace respire, ouvert sur l'extérieur, baigné d'une clarté changeante. Sobres et épurés, nos intérieurs marient luxe discret et matériaux bruts dans une palette neutre, propice à l'expression personnelle.",
     },
     // {
     //   id: 1,
@@ -42,84 +42,23 @@ const HowCanHelpYou = () => {
     //     parking: "2 places de parking titrées",
     //   },
     // },
-    // {
-    //   id: 2,
-    //   image: "/houses/APPARTEMENT-PLENITUDE-4.webp",
-    //   title: "APPARTEMENT PLÉNITUDE 4",
-    //   info: {
-    //     room: "3 chambres + salon",
-    //     surface: "113 m² à 128 m²",
-    //     parking: "2 places de parking titrées",
-    //   },
-    // },
-    // {
-    //   id: 3,
-    //   image: "/houses/APPARTEMENT-AMPLITUDE-4.webp",
-    //   title: "APPARTEMENT AMPLITUDE 4",
-    //   info: {
-    //     room: "3 chambres + salon + chambre de personnel",
-    //     surface: "140 m² à 184 m²",
-    //     parking: "2 places de parking titrées",
-    //   },
-    // },
-    // {
-    //   id: 4,
-    //   image: "/houses/APPARTEMENT-AMPLITUDE-5.webp",
-    //   title: "APPARTEMENT AMPLITUDE 5",
-    //   info: {
-    //     room: "4 chambres + salon + chambre de personnel",
-    //     surface: "182 m² à 226 m²",
-    //     parking: "2 places de parking titrées",
-    //   },
-    // },
-    // {
-    //   id: 5,
-    //   image: "/houses/PENTHOUSE-4.webp",
-    //   title: "PENTHOUSE 4",
-    //   info: {
-    //     room: "3 chambres + salon + chambre de personnel",
-    //     surface: "157 m² à 210 m²",
-    //     parking: "2 places de parking titrées",
-    //   },
-    // },
-    // {
-    //   id: 6,
-    //   image: "/houses/PENTHOUSE-05.webp",
-    //   title: "PENTHOUSE 5",
-    //   info: {
-    //     room: "4 chambres + salon + chambre de personnel",
-    //     surface: "209 m² à 225 m²",
-    //     parking: "2 places de parking titrées",
-    //   },
-    // },
   ];
 
   return (
     <div className="my-12 md:my-24 px-4">
       <div className="flex flex-col gap-3 items-center text-center my-8 md:my-12">
-        {/* <h2 className="text-lg md:text-xl text-gray-600  ${fontTitle.className}`}">Se sentir libre</h2> */}
-        <p className={`text-2xl lg:text-5xl font-semibold text-main-black ${fontTitle.className}`}>
-       Se sentir libre  à l’abri des regards
+        <p className={`text-2xl md:text-3xl lg:text-5xl font-semibold text-main-black ${fontTitle.className}`}>
+          Se sentir libre à l&apos;abri des regards
         </p>
       </div>
 
-      <div
-        className={`grid grid-cols-1 ${
-          isMobile ? "flex-col" : "flex-row"
-        } gap-2 relative`}
-      >
+      <div className="flex flex-col gap-2 relative">
         {data.map((item) => (
           <div
             key={item.id}
-            className={`relative ${
-              isMobile ? "h-64 w-full" : "h-[500px]"
-            }  w-1/2 rounded-md overflow-hidden transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-              !isMobile && activeCard === item.id
-                ? "w-full"
-                : isMobile
-                ? "w-full"
-                : "w-full"
-            }`}
+            className={`relative w-full ${
+              isMobile ? "h-[400px]" : "h-[500px]"
+            } rounded-md overflow-hidden transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)]`}
             onMouseEnter={!isMobile ? () => setActiveCard(item.id) : undefined}
             onMouseLeave={!isMobile ? () => setActiveCard(null) : undefined}
             onClick={
@@ -145,48 +84,22 @@ const HowCanHelpYou = () => {
             />
 
             {/* Content Container */}
-            <div className="absolute bottom-0 w-full p-4 md:p-8 space-y-3">
+            <div className="absolute bottom-0 w-full p-4 md:p-8 space-y-3 md:space-y-4">
               {/* Title - Always Visible */}
-              <h2 className="text-xl md:text-4xl font-bold text-white drop-shadow-lg transition-all duration-500 translate-y-0">
+              <h2 className={`text-xl md:text-2xl lg:text-4xl font-bold text-white drop-shadow-lg transition-all duration-500 translate-y-0 ${fontTitle.className}`}>
                 {item.title}
               </h2>
 
-              <p className="text-xl text-white">{item.description}</p>
+              <p className="text-sm md:text-lg lg:text-xl text-white leading-relaxed">
+                {item.description}
+              </p>
+              
               <Link href="/chapitre-2">
-                <Button className="text-xl border border-white bg-transparent !py-5 !px-12">
-                  Laissez-vous guider dans nos résidences
+                <Button className="text-xs sm:text-sm md:text-lg lg:text-xl border border-white bg-transparent hover:bg-white hover:text-black transition-all duration-300 py-2 px-3 sm:py-3 sm:px-6 md:py-5 md:px-12 rounded-lg w-full sm:w-auto">
+                  <span className="block xs:hidden">Laissez-vous guider dans nos résidences</span>
+                  <span className="hidden sm:block">Laissez-vous guider dans nos résidences</span>
                 </Button>
               </Link>
-
-              {/* Description - Animated */}
-              {/* <div className="overflow-hidden">
-                <div
-                  className={`text-white/90 text-base md:text-lg leading-snug transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-                    activeCard === item.id || isMobile
-                      ? "translate-y-0 opacity-100"
-                      : "translate-y-8 opacity-0"
-                  }`}
-                  style={{
-                    willChange: "transform, opacity",
-                    transitionDelay: activeCard === item.id ? "300ms" : "0ms",
-                  }}
-                >
-                  <div className="flex flex-col gap-2">
-                    <p className="px-2 flex items-center gap-2">
-                      <Bed className="w-6 h-6" />
-                      {item.info.room} chambres
-                    </p>
-                    <p className="px-2 flex items-center gap-2">
-                      <Ruler className="w-5 h-5" />
-                      {item.info.surface}
-                    </p>
-                    <p className="px-2 flex items-center gap-2">
-                      <Car className="w-6 h-6" />
-                      {item.info.parking}
-                    </p>
-                  </div>
-                </div>
-              </div> */}
             </div>
           </div>
         ))}

@@ -1,4 +1,5 @@
 "use client";
+import fontTitle from "@/lib/font";
 // import { arch } from "os";
 // import { Bed, Car, Ruler } from "lucide-react";
 import React, { useState, useEffect } from "react";
@@ -81,7 +82,7 @@ const Section05Marque = () => {
             {/* Content Container */}
             <div className="absolute bottom-0 w-full p-4 md:p-6 space-y-2">
               {/* Title - Always Visible */}
-              <h2 className="text-lg md:text-3xl font-bold text-white drop-shadow-lg">
+              <h2 className={`text-lg md:text-3xl font-bold text-white drop-shadow-lg ${fontTitle.className}`}>
                 {item.title}
               </h2>
 

@@ -1,19 +1,20 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import { Phone } from "lucide-react";
+import { Download } from "lucide-react";
 import SplitText from "@/components/ui/SplitText";
 import fontTitle from "@/lib/font";
+import BrochureModal from "@/components/home-page/BrochureModal";
 
 const ContactHeroSection = () => {
+  const [modalOpen, setModalOpen] = useState(false);
   return (
     <section className="min-h-screen relative flex items-center justify-center text-white">
       <style dangerouslySetInnerHTML={{
         __html: `
           .contact-hero-text * {
             line-height: 1.2 !important;
-            color: white !important;
           }
         `
       }} />
@@ -127,10 +128,14 @@ const ContactHeroSection = () => {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
-          <button className="flex items-center justify-center gap-2 px-6 py-2 rounded-md border-main border text-main-black font-bold bg-[#e5dac5] hover:bg-transparent hover:text-white  group duration-300 ease-in-out transition-all">
-            <Phone />
-            Prendre RDV
+          <button 
+            onClick={() => setModalOpen(true)}
+            className="flex items-center justify-center gap-2 px-6 py-2 rounded-md border-main border font-bold bg-main hover:bg-transparent hover:text-white group duration-300 ease-in-out transition-all"
+          >
+            <Download className="h-8 w-8 p-1 rounded-full bg-main group-hover:bg-white text-white text-main group-hover:text-main" />
+            Télécharger la brochure
           </button>
+          <BrochureModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
         </div>
       </div>
     </section>

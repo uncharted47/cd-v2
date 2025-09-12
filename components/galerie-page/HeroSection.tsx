@@ -18,7 +18,7 @@ const HeroSection = () => (
 
     <div className="absolute inset-0 w-full h-full">
       <Image
-        src="/galerie/1.webp"
+        src="/Galeriee/Chapitre 01/IMG_8414-Migliorato-NR.jpg"
         alt="Galerie"
         fill
         className="object-cover"
