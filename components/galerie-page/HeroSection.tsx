@@ -19,7 +19,7 @@ const HeroSection = () => (
     <div className="absolute inset-0 w-full h-full">
       <Image
         src="/Galeriee/Chapitre 01/IMG_8414-Migliorato-NR.jpg"
-        alt="Galerie"
+        alt=""
         fill
         className="object-cover"
         priority
@@ -28,27 +28,6 @@ const HeroSection = () => (
     </div>
    
     <div className="relative z-10 flex flex-col items-center justify-center text-center">
-      <SplitText
-      text="Galerie"
-      className={`text-6xl md:text-8xl lg:text-9xl font-semibold mb-8 text-white ${fontTitle.className}`}
-      delay={80}
-      duration={1.8}
-      ease="power3.out"
-      splitType="chars"
-      from={{ 
-        opacity: 0, 
-        y: 15, 
-        scale: 1.02
-      }}
-      to={{ 
-        opacity: 1, 
-        y: 0, 
-        scale: 1
-      }}
-      threshold={0.1}
-      rootMargin="-100px"
-      textAlign="center"
-      />
       <SplitText
       text="Plongez en images dans l'équilibre subtil entre élégance, confort et nature, au fil des deux chapitres de Clé Blanche."
       className={`text-xl md:text-3xl lg:text-4xl text-white max-w-4xl text-center ${fontTitle.className}`}
@@ -75,3 +54,26 @@ const HeroSection = () => (
 );
 
 export default HeroSection;
+
+
+    //  <SplitText
+    //   text="Galerie"
+    //   className={`text-6xl md:text-8xl lg:text-9xl font-semibold mb-8 text-white ${fontTitle.className}`}
+    //   delay={80}
+    //   duration={1.8}
+    //   ease="power3.out"
+    //   splitType="chars"
+    //   from={{ 
+    //     opacity: 0, 
+    //     y: 15, 
+    //     scale: 1.02
+    //   }}
+    //   to={{ 
+    //     opacity: 1, 
+    //     y: 0, 
+    //     scale: 1
+    //   }}
+    //   threshold={0.1}
+    //   rootMargin="-100px"
+    //   textAlign="center"
+    //   />

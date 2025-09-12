@@ -25,17 +25,6 @@ const TemoinSection = () => {
   const [autoSlideEnabled, setAutoSlideEnabled] = useState(true);
   const [showArrows, setShowArrows] = useState(false);
 
-  // Auto-slide functionality
-  useEffect(() => {
-    if (!autoSlideEnabled) return;
-    
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % temoinImages.length);
-    }, 4000); // Change slide every 4 seconds
-
-    return () => clearInterval(interval);
-  }, [autoSlideEnabled]);
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % temoinImages.length);
   };
@@ -47,10 +36,12 @@ const TemoinSection = () => {
   const openModal = (index: number) => {
     setCurrentModalImage(index);
     setIsModalOpen(true);
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
+    document.body.style.overflow = 'auto'; // Restore background scrolling
   };
 
   const nextModalImage = () => {
@@ -72,26 +63,64 @@ const TemoinSection = () => {
     setShowArrows(true); // Show arrows when dots are clicked
   };
 
+  // Keyboard navigation for modal
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!isModalOpen) return;
+
+      if (e.key === 'ArrowRight') {
+        nextModalImage();
+      } else if (e.key === 'ArrowLeft') {
+        prevModalImage();
+      } else if (e.key === 'Escape') {
+        closeModal();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    // Cleanup function to remove the event listener
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isModalOpen, nextModalImage, prevModalImage, closeModal]);
+
+  // Auto-slide functionality
+  useEffect(() => {
+    if (!autoSlideEnabled) return;
+    
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % temoinImages.length);
+    }, 4000); // Change slide every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [autoSlideEnabled]);
+
   return (
     <section className="py-16 bg-white">
       <style dangerouslySetInnerHTML={{
         __html: `
-          .slider-container * {
+          .slider-container-temoin * {
             line-height: 1.2 !important;
           }
           
-          .scroll-reveal-slider {
+          .scroll-reveal-slider-temoin {
             opacity: 0;
             transform: translateY(50px) scale(0.95);
             transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
           }
           
-          .scroll-reveal-slider.visible {
+          .scroll-reveal-slider-temoin.visible {
             opacity: 1;
             transform: translateY(0) scale(1);
           }
 
-          .slider-nav-button {
+          .slider-container-temoin {
+            position: relative;
+            height: 60vh; /* Fixed height for the slider */
+          }
+
+          .slider-nav-button-temoin {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
@@ -113,25 +142,25 @@ const TemoinSection = () => {
             visibility: hidden;
           }
 
-          .slider-nav-button.show {
+          .slider-nav-button-temoin.show {
             opacity: 1;
             visibility: visible;
           }
 
-          .slider-nav-button:hover {
+          .slider-nav-button-temoin:hover {
             background: white;
             transform: translateY(-50%) scale(1.1);
           }
 
-          .slider-nav-button.prev {
-            left: 20px;
+          .slider-nav-button-temoin.prev {
+            left: -70px;
           }
 
-          .slider-nav-button.next {
-            right: 20px;
+          .slider-nav-button-temoin.next {
+            right: -70px;
           }
 
-          .modal-overlay {
+          .modal-overlay-temoin {
             position: fixed;
             inset: 0;
             background: rgba(0, 0, 0, 0.95);
@@ -142,20 +171,20 @@ const TemoinSection = () => {
             justify-content: center;
             padding: 20px;
             opacity: 0;
-            animation: fadeIn 0.3s ease-out forwards;
+            animation: fadeInTemoin 0.3s ease-out forwards;
           }
 
-          .modal-content {
+          .modal-content-temoin {
             position: relative;
             max-width: 90vw;
             max-height: 90vh;
             width: auto;
             height: auto;
             transform: scale(0.9);
-            animation: scaleIn 0.3s ease-out forwards;
+            animation: scaleInTemoin 0.3s ease-out forwards;
           }
 
-          .modal-content img {
+          .modal-content-temoin img {
             max-width: 100%;
             max-height: 90vh;
             width: auto;
@@ -164,9 +193,9 @@ const TemoinSection = () => {
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
           }
 
-          .modal-nav-button {
-            position: absolute;
-            top: 50%;
+          .modal-nav-button-temoin {
+            position: fixed; /* Position relative to viewport */
+            top: 50vh; /* Center vertically in viewport */
             transform: translateY(-50%);
             background: rgba(255, 255, 255, 0.95);
             border: none;
@@ -180,27 +209,27 @@ const TemoinSection = () => {
             font-size: 24px;
             font-weight: bold;
             transition: all 0.3s ease;
-            z-index: 10;
+            z-index: 10000; /* Ensure it's on top */
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
           }
 
-          .modal-nav-button:hover {
+          .modal-nav-button-temoin:hover {
             background: white;
             transform: translateY(-50%) scale(1.1);
           }
 
-          .modal-nav-button.prev {
-            left: -80px;
+          .modal-nav-button-temoin.prev {
+            left: 50px; /* Fixed distance from left edge */
           }
 
-          .modal-nav-button.next {
-            right: -80px;
+          .modal-nav-button-temoin.next {
+            right: 50px; /* Fixed distance from right edge */
           }
 
-          .close-button {
-            position: absolute;
-            top: -60px;
-            right: 0;
+          .close-button-temoin {
+            position: fixed; /* Position relative to viewport */
+            top: 40px;
+            right: 40px;
             background: rgba(255, 255, 255, 0.95);
             border: none;
             border-radius: 50%;
@@ -214,15 +243,16 @@ const TemoinSection = () => {
             font-weight: bold;
             transition: all 0.3s ease;
             color: #333;
+            z-index: 10001; /* Ensure it's on top of everything */
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
           }
 
-          .close-button:hover {
+          .close-button-temoin:hover {
             background: white;
             transform: scale(1.1);
           }
 
-          .slider-dots {
+          .slider-dots-temoin {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -230,7 +260,7 @@ const TemoinSection = () => {
             margin-top: 25px;
           }
 
-          .dot {
+          .dot-temoin {
             width: 12px;
             height: 12px;
             border-radius: 50%;
@@ -239,74 +269,62 @@ const TemoinSection = () => {
             transition: all 0.3s ease;
           }
 
-          .dot.active {
+          .dot-temoin.active {
             background: #333;
             transform: scale(1.2);
           }
 
-          .image-counter {
+          .image-counter-temoin {
             font-size: 16px;
             color: #666;
             font-weight: 500;
           }
 
-          /* Fixed image sizing */
-          .slider-image {
+          .slider-image-temoin {
             width: 100% !important;
-            height: 60vh !important;
+            height: 100% !important; /* Fill the fixed container */
             object-fit: cover !important;
           }
 
-          @keyframes fadeIn {
+          @keyframes fadeInTemoin {
             from { opacity: 0; }
             to { opacity: 1; }
           }
 
-          @keyframes scaleIn {
+          @keyframes scaleInTemoin {
             from { transform: scale(0.9); }
             to { transform: scale(1); }
           }
 
           /* Mobile styles */
           @media (max-width: 768px) {
-            .slider-nav-button {
+            .slider-container-temoin {
+              height: 40vh;
+            }
+            .slider-nav-button-temoin {
               display: none !important;
             }
-
-            .modal-nav-button {
+            .modal-nav-button-temoin {
               width: 50px;
               height: 50px;
               font-size: 20px;
             }
-
-            .modal-nav-button.prev {
-              left: -60px;
+            .modal-nav-button-temoin.prev {
+              left: 20px;
             }
-
-            .modal-nav-button.next {
-              right: -60px;
+            .modal-nav-button-temoin.next {
+              right: 20px;
             }
-
-            .close-button {
+            .close-button-temoin {
               width: 40px;
               height: 40px;
               font-size: 20px;
-              top: -50px;
+              top: 20px;
+              right: 20px;
             }
-
-            .image-counter {
+            .image-counter-temoin {
               font-size: 14px;
             }
-
-            .slider-image {
-              height: 50vh !important;
-            }
-          }
-
-          /* Remove any borders/outlines */
-          .slider-container img {
-            outline: none !important;
-            border: none !important;
           }
         `
       }} />
@@ -321,67 +339,51 @@ const TemoinSection = () => {
             </p>
         </div>
         
-        {/* Slider Container - 80% width */}
-        <div className="slider-container relative w-[80%] mx-auto">
-          <div className="relative overflow-hidden" onClick={handleSliderClick}>
+        <div className="slider-container-temoin w-[80%] mx-auto scroll-reveal-slider-temoin">
+          <button
+            className={`slider-nav-button-temoin prev ${showArrows ? 'show' : ''}`}
+            onClick={(e) => { e.stopPropagation(); prevSlide(); }}
+          >
+            ‹
+          </button>
+          <button
+            className={`slider-nav-button-temoin next ${showArrows ? 'show' : ''}`}
+            onClick={(e) => { e.stopPropagation(); nextSlide(); }}
+          >
+            ›
+          </button>
+          <div className="relative overflow-hidden h-full" onClick={handleSliderClick}>
             <div 
-              className="flex transition-transform duration-500 ease-in-out"
+              className="flex transition-transform duration-500 ease-in-out h-full"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
               {temoinImages.map((src, idx) => (
                 <div 
                   key={idx}
-                  className="w-full flex-shrink-0 cursor-pointer"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    openModal(idx);
-                  }}
+                  className="w-full flex-shrink-0 cursor-pointer h-full"
+                  onClick={(e) => { e.stopPropagation(); openModal(idx); }}
                 >
                   <Image
                     src={src}
                     alt={`Appartement témoin ${idx + 1}`}
                     width={1200}
                     height={600}
-                    className="slider-image hover:scale-105 transition-transform duration-300"
+                    className="slider-image-temoin hover:scale-105 transition-transform duration-300"
                     priority={idx === 0}
                   />
                 </div>
               ))}
             </div>
-            
-            {/* Navigation Buttons - Show only when clicked */}
-            <button
-              className={`slider-nav-button prev ${showArrows ? 'show' : ''}`}
-              onClick={(e) => {
-                e.stopPropagation();
-                prevSlide();
-              }}
-            >
-              ‹
-            </button>
-            <button
-              className={`slider-nav-button next ${showArrows ? 'show' : ''}`}
-              onClick={(e) => {
-                e.stopPropagation();
-                nextSlide();
-              }}
-            >
-              ›
-            </button>
           </div>
           
-          {/* Slider Dots with Counter */}
-          <div className="slider-dots">
-            {/* Image Counter */}
-            <div className="image-counter">
+          <div className="slider-dots-temoin">
+            <div className="image-counter-temoin">
               {currentSlide + 1} / {temoinImages.length}
             </div>
-            
-            {/* Dots */}
             {temoinImages.map((_, idx) => (
               <button
                 key={idx}
-                className={`dot ${idx === currentSlide ? 'active' : ''}`}
+                className={`dot-temoin ${idx === currentSlide ? 'active' : ''}`}
                 onClick={() => goToSlide(idx)}
               />
             ))}
@@ -396,28 +398,24 @@ const TemoinSection = () => {
         </div>
       </div>
 
-      {/* Modal for zoomed images */}
       {isModalOpen && (
-        <div className="modal-overlay" onClick={closeModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="close-button" onClick={closeModal}>
-              ×
-            </button>
-            
-            {/* Modal Navigation Buttons */}
-            <button
-              className="modal-nav-button prev"
-              onClick={prevModalImage}
-            >
-              ‹
-            </button>
-            <button
-              className="modal-nav-button next"
-              onClick={nextModalImage}
-            >
-              ›
-            </button>
-            
+        <div className="modal-overlay-temoin" onClick={closeModal}>
+          <button className="close-button-temoin" onClick={closeModal}>
+            ×
+          </button>
+          <button
+            className="modal-nav-button-temoin prev"
+            onClick={(e) => { e.stopPropagation(); prevModalImage(); }}
+          >
+            ‹
+          </button>
+          <button
+            className="modal-nav-button-temoin next"
+            onClick={(e) => { e.stopPropagation(); nextModalImage(); }}
+          >
+            ›
+          </button>
+          <div className="modal-content-temoin" onClick={(e) => e.stopPropagation()}>
             <Image
               src={temoinImages[currentModalImage]}
               alt={`Appartement témoin ${currentModalImage + 1}`}
@@ -444,32 +442,18 @@ const TemoinSection = () => {
               rootMargin: '0px 0px -10% 0px'
             });
             
-            const initAnimation = () => {
-              const sliderContainer = document.querySelector('.slider-container');
-              if (sliderContainer) {
-                sliderContainer.classList.add('scroll-reveal-slider');
-                observer.observe(sliderContainer);
+            const initAnimationTemoin = () => {
+              const slider = document.querySelector('.slider-container-temoin');
+              if (slider) {
+                observer.observe(slider);
               }
             };
             
             if (document.readyState === 'loading') {
-              document.addEventListener('DOMContentLoaded', initAnimation);
+              document.addEventListener('DOMContentLoaded', initAnimationTemoin);
             } else {
-              initAnimation();
+              initAnimationTemoin();
             }
-
-            // Keyboard navigation
-            document.addEventListener('keydown', (e) => {
-              if (document.querySelector('.modal-overlay')) {
-                if (e.key === 'ArrowRight') {
-                  document.querySelector('.modal-nav-button.next')?.click();
-                } else if (e.key === 'ArrowLeft') {
-                  document.querySelector('.modal-nav-button.prev')?.click();
-                } else if (e.key === 'Escape') {
-                  document.querySelector('.close-button')?.click();
-                }
-              }
-            });
           }
         `
       }} />
