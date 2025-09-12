@@ -6,8 +6,8 @@ import Link from "next/link";
 const Footer = () => {
   const navLinks = [
     { label: "Accueil", href: "/" },
-    { label: "Notre Projet", href: "/notre-projet" },
-    { label: "Nos appartements", href: "/nos-appartements" },
+    { label: "Notre marque", href: "/notre-marque" },
+    { label: "Chapitre II", href: "/chapitre-2" },
     { label: "Galerie", href: "/galerie" },
     { label: "Contact", href: "/contact" },
   ];

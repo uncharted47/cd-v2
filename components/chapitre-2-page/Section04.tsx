@@ -38,7 +38,7 @@ const Section04 = () => {
       >
         {/* Image avant (left) */}
         <img
-          src="/houses/PENTHOUSE-05.webp"
+          src="/penthouse111.jpeg"
           alt="Avant"
           className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
           draggable={false}
