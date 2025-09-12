@@ -313,12 +313,12 @@ const TemoinSection = () => {
       
       <div className="container mx-auto px-5">
         <div className="flex flex-col items-center justify-center min-h-[30vh]">
-          <h2 className={`text-4xl md:text-6xl font-bold text-main-black mb-6 drop-shadow-lg text-center lg:text-center ${fontTitle.className}`}>
+            <h2 className={`text-2xl md:text-4xl font-bold text-main-black mb-4 drop-shadow-lg text-center lg:text-center ${fontTitle.className}`}>
             Notre appartement témoin
-          </h2>
-          <p className="text-xl md:text-2xl text-gray-700 max-w-4xl text-center lg:text-center mb-8 drop-shadow">
+            </h2>
+            <p className="text-base md:text-lg text-gray-700 max-w-2xl text-center lg:text-center mb-6 drop-shadow">
             Clé Blanche vous ouvre les portes de son appartement témoin. Un espace aménagé avec soin pour vous permettre de visualiser votre futur quotidien, de ressentir l&apos;harmonie des volumes, la qualité des finitions et la chaleur des intérieurs.
-          </p>
+            </p>
         </div>
         
         {/* Slider Container - 80% width */}

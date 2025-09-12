@@ -307,7 +307,7 @@ const Chapitre2Section = () => {
       
       <div className="container mx-auto px-5">
         <div className="flex flex-col items-center justify-center min-h-[30vh]">
-          <h2 className={`text-4xl md:text-6xl font-bold text-main-black mb-6 drop-shadow-lg text-center lg:text-center ${fontTitle.className}`}>
+          <h2 className={`text-2xl md:text-4xl font-bold text-main-black mb-4 drop-shadow-lg text-center lg:text-center ${fontTitle.className}`}>
             Clé Blanche entame son Chapitre II
           </h2>
           <p className="text-xl md:text-2xl text-gray-700 text-center max-w-4xl">

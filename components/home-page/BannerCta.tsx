@@ -21,7 +21,7 @@ const BannerCta = () => {
               Deuxième et dernière phase, une opportunité unique !
             </p>
             <button
-              className="my-5 flex items-center gap-2 px-2 lg:px-6 py-2 rounded-md border-main border text-main-black bg-main hover:bg-main hover:text-white duration-300 ease-in-out transition-all group"
+              className="flex items-center justify-center gap-2 px-6 py-2 rounded-md border-main border font-bold bg-main hover:bg-transparent hover:text-white group duration-300 ease-in-out transition-all"
               onClick={() => setModalOpen(true)}
             >
               <Download className="h-8 w-8 p-1  rounded-full bg-main text-white group-hover:bg-white group-hover:text-main " />
