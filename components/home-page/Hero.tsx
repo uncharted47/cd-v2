@@ -78,7 +78,7 @@ const Hero = () => {
             }}
             className="flex items-center justify-center gap-2 px-6 py-2 rounded-md border-main border text-main-black font-bold bg-main hover:bg-transparent hover:text-white  group duration-300 ease-in-out transition-all"
           >
-            <div className="h-8 w-8 p-1.5 flex justify-center items-center rounded-full bg-white text-main-black  group-hover:bg-main">
+            <div className="h-8 w-8 p-1.5 flex justify-center items-center rounded-full bg-main text-main-black  group-hover:bg-main">
               <Phone />
             </div>
             Demander une visite privée

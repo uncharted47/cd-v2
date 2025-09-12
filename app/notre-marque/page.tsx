@@ -1,4 +1,4 @@
-import HeroSection from "@/components/chapitre-2-page/HeroSection";
+import HeroSection from "@/components/notre-marque-page/HeroSection";
 import Section01Marque from "@/components/notre-marque-page/Section01Marque";
 import Section02Marque from "@/components/notre-marque-page/Section02Marque";
 // import Section03Marque from "@/components/notre-marque-page/Section03Marque";
