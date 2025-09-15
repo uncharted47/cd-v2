@@ -36,7 +36,7 @@ const ContactHeroSection = () => {
         <div className="flex flex-col gap-3 mx-auto text-center mb-8">
           <SplitText
             text="Notre équipe est"
-            className={`text-4xl md:text-6xl lg:text-7xl font-light tracking-wide text-white ${fontTitle.className}`}
+            className={`text-5xl lg:text-7xl font-light tracking-wide text-white ${fontTitle.className}`}
             delay={40}
             duration={1.4}
             ease="power4.out"
@@ -59,7 +59,7 @@ const ContactHeroSection = () => {
           />
           <SplitText
             text="à votre écoute"
-            className={`text-4xl md:text-6xl lg:text-7xl font-medium tracking-wide text-white ${fontTitle.className}`}
+            className={`text-5xl lg:text-7xl font-medium tracking-wide text-white ${fontTitle.className}`}
             delay={60}
             duration={1.4}
             ease="power4.out"
@@ -85,7 +85,7 @@ const ContactHeroSection = () => {
         <div className="flex flex-col gap-2">
           <SplitText
             text="pour toute information"
-            className={`text-xl md:text-2xl lg:text-3xl font-extralight tracking-wider text-white max-w-4xl mx-auto leading-relaxed ${fontTitle.className}`}
+            className={`text-lg tracking-wider text-white max-w-4xl mx-auto leading-relaxed ${fontTitle.className}`}
             delay={80}
             duration={1.2}
             ease="power3.out"
@@ -106,7 +106,7 @@ const ContactHeroSection = () => {
           />
           <SplitText
             text="ou prise de rendez-vous personnalisé"
-            className={`text-xl md:text-2xl lg:text-3xl font-extralight tracking-wider text-white max-w-4xl mx-auto leading-relaxed ${fontTitle.className}`}
+            className={`text-lg tracking-wider text-white max-w-4xl mx-auto leading-relaxed ${fontTitle.className}`}
             delay={60}
             duration={1.2}
             ease="power3.out"

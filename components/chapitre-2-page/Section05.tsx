@@ -1,4 +1,5 @@
 import fontTitle from "@/lib/font"
+import { motion } from "framer-motion"
 
 const Section05 = () => (
   <section className="min-h-screen flex flex-col lg:flex-row">
@@ -14,19 +15,31 @@ const Section05 = () => (
         </div>
 
     
-        <h2 className={`text-3xl md:text-5xl font-bold text-main-black ${fontTitle.className}`}>
+        <h2 className={`text-5xl lg:text-7xl font-bold text-main-black ${fontTitle.className}`}>
           Des espaces de vie, été comme hiver
         </h2>
 
 
         <div className="space-y-6">
           <br />
-          <p className="text-xl md:text-2xl text-gray-700 max-w-2xl text-center lg:text-left mb-4">
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-lg text-gray-700 max-w-2xl text-center lg:text-left mb-4"
+          >
             Sur les terrasses de Clé Blanche, la lumière s&apos;installe en toute saison. Quelques plantes, posées avec soin, se balancent au rythme discret de la brise. Rien ne trouble la ligne claire de l&apos;architecture : le vitrage coulissant permet d&apos;ouvrir ou de fermer l&apos;espace en fonction des saisons ou selon vos désirs.
-          </p>
-          <p className="text-xl md:text-2xl text-gray-700 max-w-2xl text-center lg:text-left">
+          </motion.p>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="text-lg text-gray-700 max-w-2xl text-center lg:text-left"
+          >
             Ouvert, il efface les frontières. Fermé, il protège sans jamais cloisonner, dans un respect absolu de l&apos;esthétique de la façade. On ne sait plus très bien où finit l&apos;intérieur, où commence l&apos;extérieur. C&apos;est un entre-deux, paisible, propice aux silences, aux lectures, aux matins lents. Un espace à inventer, chaque jour.
-          </p>
+          </motion.p>
         </div>
 
      
