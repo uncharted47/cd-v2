@@ -27,7 +27,7 @@ const HeroSection = () => {
         <div className="flex flex-col gap-5 lg:w-3/4 md:w-full mx-auto text-center">
           <SplitText
             text="Bien plus qu'une résidence "
-            className={`text-6xl font-semibold ${fontTitle.className}`}
+            className={`text-5xl lg:text-7xl font-semibold ${fontTitle.className}`}
             delay={51}
             duration={1.15}
             ease="power3.out"
@@ -48,7 +48,7 @@ const HeroSection = () => {
           />
           <SplitText
             text="Un luxe discret, une élégance intemporelle"
-            className={`lg:text-4xl ${fontTitle.className}`}
+            className={`text-lg ${fontTitle.className}`}
             delay={38}
             duration={1.28}
             ease="power2.out"

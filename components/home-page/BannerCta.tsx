@@ -17,7 +17,7 @@ const BannerCta = () => {
             <h2 className="text-lg mt-6">
               Une nouvelle page s’écrit…
             </h2>
-            <p className={`text-3xl lg:text-5xl font-semibold text-second ${fontTitle.className}`}>
+            <p className={`text-5xl font-semibold text-second ${fontTitle.className}`}>
               Deuxième et dernière phase, une opportunité unique !
             </p>
             <button

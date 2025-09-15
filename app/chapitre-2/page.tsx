@@ -20,7 +20,7 @@ const Chapitre2Page = () => {
           <div className="flex flex-col gap-5 w-full max-w-4xl mx-auto text-center">
             <SplitText
               text="Appartements et penthouses d'exception"
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold"
+              className="text-5xl lg:text-7xl font-semibold"
               delay={51}
               duration={1.15}
               ease="power3.out"
@@ -41,7 +41,7 @@ const Chapitre2Page = () => {
             />
             <SplitText
               text="Dans un environnement exclusif"
-              className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl"
+              className="text-lg"
               delay={38}
               duration={1.28}
               ease="power2.out"

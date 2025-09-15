@@ -30,7 +30,7 @@ const HeroSection = () => (
     <div className="relative z-10 flex flex-col items-center justify-center text-center">
       <SplitText
       text="Plongez en images dans l'équilibre subtil entre élégance, confort et nature, au fil des deux chapitres de Clé Blanche."
-      className={`text-xl md:text-3xl lg:text-4xl text-white max-w-4xl text-center ${fontTitle.className}`}
+      className={`text-lg md:text-5xl lg:text-7xl text-white max-w-4xl text-center ${fontTitle.className}`}
       delay={60}
       duration={2.0}
       ease="power2.out"

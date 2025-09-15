@@ -77,14 +77,14 @@ const SectionArtiste = () => {
             {/* Content Container */}
             <div className="absolute bottom-0 w-full p-4 md:p-6 space-y-2">
               {/* Title - Always Visible */}
-              <h2 className={`text-lg md:text-3xl font-bold text-white drop-shadow-lg ${fontTitle.className}`}>
+              <h2 className={`text-5xl lg:text-7xl font-bold text-white drop-shadow-lg ${fontTitle.className}`}>
                 {item.title}
               </h2>
 
               {/* Description - Always visible */}
               <div className="space-y-2">
-                <p className="text-sm md:text-base text-white leading-relaxed">{item.description}</p>
-                <p className="text-sm md:text-base text-white">
+                <p className="text-lg text-white leading-relaxed">{item.description}</p>
+                <p className="text-lg text-white">
                   {item.architect.name} 
                 </p>
               </div>

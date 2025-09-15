@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import { Home, Maximize2, Car } from "lucide-react";
+import { Home, Car, Maximize2 } from "lucide-react";
+import { motion } from "framer-motion";
 import fontTitle from '@/lib/font';
-// import BackgroundVideo from "../home-page/BackgroundVideo";
 
 const Section02 = () => {
   const apartments = [
@@ -98,13 +98,13 @@ const Section02 = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
               <div className="absolute bottom-0 left-0 w-full p-8">
                 <h3 
-                 className={`text-2xl lg:text-4xl font-bold  mb-6 text-white drop-shadow-lg ${fontTitle.className}`}
+                 className={`text-5xl lg:text-7xl font-bold mb-6 text-white drop-shadow-lg ${fontTitle.className}`}
                 >
                   {apartment.title}
                 </h3>
                 <div className="flex flex-wrap gap-6 mb-2">
                   <span
-                    className={`px-4 py-2 rounded-full text-sm font-semibold ${fontTitle} ${getTypeColor(
+                    className={`px-4 py-2 rounded-full text-lg font-semibold ${fontTitle} ${getTypeColor(
                       apartment.type
                     )} shadow-lg`}
                   >

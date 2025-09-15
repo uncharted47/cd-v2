@@ -56,8 +56,8 @@ const SectionMarqueAnimated = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-black/60 group-hover:from-black/30 group-hover:to-black/80 transition-all duration-700 z-10" />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-20">
-            <h3 className={`text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 drop-shadow-lg ${fontTitle.className} animate-fade-in-down`}>{card.title}</h3>
-            <p className="text-white text-base md:text-lg font-light drop-shadow animate-fade-in-up opacity-80 group-hover:opacity-100 transition-all duration-700">
+            <h3 className={`text-5xl lg:text-7xl font-bold text-white mb-2 drop-shadow-lg ${fontTitle.className} animate-fade-in-down`}>{card.title}</h3>
+            <p className="text-white text-lg font-light drop-shadow animate-fade-in-up opacity-80 group-hover:opacity-100 transition-all duration-700">
               {card.desc}
             </p>
           </div>

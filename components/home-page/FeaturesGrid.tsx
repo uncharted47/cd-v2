@@ -53,7 +53,7 @@ const FeaturesGrid = () => {
       }}
     >
       <h2
-        className={`font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white text-center mb-8 md:mb-12 px-4 ${fontTitle.className}`}
+        className={`font-bold text-5xl lg:text-7xl text-white text-center mb-8 md:mb-12 px-4 ${fontTitle.className}`}
       >
         Clé Blanche Chapitre II
       </h2>
@@ -64,10 +64,10 @@ const FeaturesGrid = () => {
             className="flex flex-col items-start gap-2 md:gap-3 p-3 md:p-4 rounded-xl shadow-sm bg-white hover:shadow-md transition-shadow duration-300"
           >
             <feature.icon className="w-7 h-7 md:w-8 md:h-8 text-white bg-main p-1.5 rounded-full flex-shrink-0" />
-            <h3 className="text-sm md:text-base font-semibold leading-tight">
+            <h3 className="text-lg font-semibold leading-tight">
               {feature.title}
             </h3>
-            <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
+            <p className="text-lg text-gray-600 leading-relaxed">
               {feature.description}
             </p>
           </div>

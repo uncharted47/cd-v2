@@ -68,7 +68,7 @@ const FormContact = () => {
             onSubmit={formik.handleSubmit}
             className="backdrop-blur-3xl p-5 py-12 rounded-2xl border border-second flex flex-col gap-5 text-black"
           >
-            <h2 className={`text-3xl md:text-5xl font-bold text-main text-center ${fontTitle.className}`}>
+            <h2 className={`text-5xl lg:text-7xl font-bold text-main text-center ${fontTitle.className}`}>
               Nous contacter
             </h2>
             <div className="flex flex-col gap-2.5">
